@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物流数据</title>
+    <link rel="stylesheet" href="../static/style/normalize.css">
+    <link rel="stylesheet" href="../static/style/reset.css">
+    <link rel="stylesheet" href="../static/style/style.css">
+    <link rel="stylesheet" href="../static/style/media.css">
+    <script  src="../static/script/time.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clear-fixed-after">
+            <div class="title clear-fixed-after">
+                <span>助农电商大数据系统</span>
+                <i></i>
+            </div>
+            <div class="nav">
+                <ul class="clear-fixed-after">
+                    <li class="active"><a href="javascript:void(0)">物流数据</a></li>
+                    <li><a href="./ebusiness.html">电商数据</a></li>
+                    <li><a href="./production.html">特色产品</a></li>
+                </ul>
+            </div>
+            <div class="timer">
+                <span id="time"></span>
+            </div>
+        </div>
+        <!-- 电商页面 -->
+        <div class="page-content business-content clear-fixed-after">
+            <div class="item-wrap item-wrap01">
+                <div class="item-inner">
+                    <div class="item-cell border-type01">
+                        <div class="item-border">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="map-data" id="logisticsMapChart">
+
+                            </div>
+                            <div class="item-cell text-data border-type02"
+                                style="background: none;height:calc(100% - 100px);right: 15px;">
+                                <div class="item-border">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                                <div class="item-content" style="background: none;">
+                                    <div id="myScroll" style="height: calc(100% - 30px);margin:15px 0;overflow:hidden">
+                                        <dl>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-data">
+                                <span class="img-number-show icon-airplane">
+                                    <b>上行包裹</b><br />
+                                    <strong>3,897<small>件</small></strong>
+                                </span>
+                                <span class="img-number-show icon-car">
+                                    <b>下行包裹</b><br />
+                                    <strong>35,786<small>件</small></strong>
+                                </span>
+                                <span class="img-number-show icon-box">
+                                    <b>站点总数</b><br />
+                                    <strong>208<small>个</small></strong>
+                                </span>
+                            </div>
+                            <div class="item-list-data clear-fixed-after">
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>新证树</span>
+                                        <b>1,438人</b>
+                                    </div>
+                                </div>
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>当前店铺数</span>
+                                        <b>3,648人</b>
+                                    </div>
+                                </div>
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>电商带头人</span>
+                                        <b>3,893人</b>
+                                    </div>
+                                </div>
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>带动就业人数</span>
+                                        <b>9,489人</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-data">
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="result-info" id="resultInfo">
+                                        <span>产品推介会场次43场。</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrap item-wrap02">
+                <div class="item-inner">
+                    <div class="item-cell border-type01">
+                        <div class="title">
+                            <span>站点建设情况</span>
+                        </div>
+                        <div class="item-border">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="item-content">
+                            <ul class="site_build_condition clear-fixed-after">
+                                <li>
+                                    <div>
+                                        <span>56%</span>
+                                    </div>
+                                    <b>扶贫村覆盖率</b>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span>100%</span>
+                                    </div>
+                                    <b>乡镇覆盖率</b>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span>30岁</span>
+                                    </div>
+                                    <b>站点平均年龄</b>
+                                </li>
+                            </ul>
+                            <div class="build_process">
+                                <span>站点建设进度</span>
+                                <small>
+                                    <b><i></i></b>
+                                </small>
+                                <strong>60%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrap item-wrap03">
+                <div class="item-inner">
+                    <div class="item-cell border-type01">
+                        <div class="title">
+                            <span>学院培训情况</span>
+                        </div>
+                        <div class="item-border">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="learn_condition clear-fixed-after">
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>累计培训</span>
+                                        <b>9,489<small>人次</small></b>
+                                    </div>
+                                </div>
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>实操培训</span>
+                                        <b>5,878<small>人次</small></b>
+                                    </div>
+                                </div>
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>其实贫困户</span>
+                                        <b>326<small>人次</small></b>
+                                    </div>
+                                </div>
+                                <div class="item-cell border-type02">
+                                    <div class="item-border">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <div class="list-data">
+                                        <span>学员好评数</span>
+                                        <b>98,3<small>%</small></b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="learn_rank">
+                                <span>乡镇培训排名</span>
+                                <div class="rank_chart" id="learnRankChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/script/jquery.min.js"></script>
+    <script src="../static/lib/echarts/echarts.js"></script>
+    <script src="../static/lib/echarts/wafangdian.js"></script>
+    <script src="../static/lib/scroll/scroll.js"></script>
+    <script src="../static/script/data.js"></script>
+    <script src="../static/script/plugin.js"></script>
+    <script src="../static/script/logistics.js"></script>
+</body>
+
+</html>

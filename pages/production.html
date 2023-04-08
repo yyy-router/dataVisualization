@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>特色产品</title>
+    <link rel="stylesheet" href="../static/style/normalize.css">
+    <link rel="stylesheet" href="../static/lib/jscrollpane/style/jquery.jscrollpane.css">
+    <link rel="stylesheet" href="../static/lib/animateStyle/animate.css">
+    <link rel="stylesheet" href="../static/style/reset.css">
+    <link rel="stylesheet" href="../static/style/style.css">
+    <link rel="stylesheet" href="../static/style/media.css">
+    <script  src="../static/script/time.js"></script>
+    <style>
+        .product-detail-content{
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px;
+            background: #0c1843;
+            z-index: 999;
+            display: none;
+            box-sizing: border-box;
+        }
+        .close_detail{
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: url(./../static/images/icon-close.png) no-repeat center center;
+            background-size: 40px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header clear-fixed-after">
+            <div class="title clear-fixed-after">
+                <span>助农电商大数据系统</span>
+                <i></i>
+            </div>
+            <div class="nav">
+                <ul class="clear-fixed-after">
+                    <li><a href="./logistics.html">物流数据</a></li>
+                    <li><a href="ebusiness.html">电商数据</a></li>
+                    <li class="active"><a href="javascript:void(0)">特色产品</a></li>
+                </ul>
+            </div>
+            <div class="timer">
+                <span id="time"></span>
+            </div>
+        </div>
+        <div class="page-content government-content clear-fixed-after">
+            <div class="item-wrap-left">
+                <div class="item-wrap item-wrap01">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>各平台销售排名                                </span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="chart-wrap">
+                                    <span class="web-sell-data AnimateflipInX"><b><strong>26.5</strong>亿元</b><small>淘宝</small></span>
+                                    <div class="gdp-pie-chart" id="gdpPieChart">
+
+                                    </div>
+                                </div>
+                                <ul class="clear-fixed-after">
+                                    <li><span>淘宝</span><b>10</b><span>亿元</span></li>
+                                    <li><span>京东</span><b>6</b><span>亿元</span></li>
+                                    <li><span>苏宁易购</span><b>3</b><span>亿元</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap02">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>特色产品销售情况</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="info_card economic_info clear-fixed-after">
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>苹果</span>
+                                                <b>5<small>亿元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>地瓜</span>
+                                                <b>2<small>亿元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>樱桃</span>
+                                                <b>8<small>亿元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>葡萄</span>
+                                                <b>1<small>亿元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap03">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>特色产品销售变动情况</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <span><small>19</small>亿</span>
+                                <div class="gdp-line-chart" id="gdpLineChart">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrap-center">
+                <div class="item-wrap item-wrap04">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <video class="video" autoplay controls src="../static/video/introduction.mp4"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap05">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>特色产品销售情况</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content" style="border-top: 1px solid transparent;">
+                                <ul class="product-list clear-fixed-after">
+                                    <li>
+                                        <div class="product-panel clear-fixed-after"  data-id="2">
+                                            <h2>苹果</h2>
+                                            <div class="product-img">
+                                                <img src="../static/images/product-img03.png" alt="">
+                                            </div>
+                                            <span>
+                                                <h3>产量</h3>
+                                                <strong><b>77</b>万吨</strong>
+                                            </span>
+                                            <span>
+                                                <h3>销量</h3>
+                                                <strong><b>23</b>万吨</strong>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="product-panel clear-fixed-after" data-id="0">
+                                            <h2>地瓜</h2>
+                                            <div class="product-img">
+                                                <img src="../static/images/product-img01.png" alt="">
+                                            </div>
+                                            <span>
+                                                <h3>产量</h3>
+                                                <strong><b>33</b>万吨</strong>
+                                            </span>
+                                            <span>
+                                                <h3>销量</h3>
+                                                <strong><b>12</b>万吨</strong>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="product-panel clear-fixed-after" data-id="1">
+                                            <h2>樱桃</h2>
+                                            <div class="product-img">
+                                                <img src="../static/images/product-img02.png" alt="">
+                                            </div>
+                                            <span>
+                                                <h3>产量</h3>
+                                                <strong><b>6</b>万吨</strong>
+                                            </span>
+                                            <span>
+                                                <h3>销量</h3>
+                                                <strong><b>3.6</b>万吨</strong>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="product-panel clear-fixed-after" data-id="3">
+                                            <h2>葡萄</h2>
+                                            <div class="product-img">
+                                                <img src="../static/images/product-img04.png" alt="">
+                                            </div>
+                                            <span>
+                                                <h3>产量</h3>
+                                                <strong><b>3</b>万吨</strong>
+                                            </span>
+                                            <span>
+                                                <h3>销量</h3>
+                                                <strong><b>1</b>万吨</strong>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrap-right">
+                <div class="item-wrap item-wrap06">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>特色产品销量情况</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="info_card economic_info clear-fixed-after" id="productSalesList">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap07">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>各乡镇特色产品销售情况</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="poor-bar-chart" id="poorBarChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap08">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>销量占比</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="population-ratio" id="opulationRatio"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content product-detail-content clear-fixed-after">
+            <i class="close_detail"></i>
+            <div class="item-wrap-left">
+                <div class="item-wrap item-wrap01">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span class="detail-title">地瓜专区</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="product-rank-tip">
+                                    <ul>
+                                        <li>
+                                            <b>NO.4</b>
+                                            <small>产量排名</small>
+                                        </li>
+                                        <li>
+                                            <b>NO.1</b>
+                                            <small>销售排名</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product_kind">
+                                    <img class="detail-img" src="../static/images/digua.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap02">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>产量TOP5排名</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="product-yield" id="productYieldChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap03">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>销量TOP5排名</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="sales-rank" id="salesRankChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrap-center">
+                <div class="item-wrap item-wrap04">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <ul class="product-detail-data clear-fixed-after">
+                                    <li>
+                                        <h2>产量</h2>
+                                        <span><b>122,290</b>吨</span>
+                                        <span>
+                                            <small>同比</small>
+                                            <strong>2.3%</strong>
+                                            <i></i>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <h2>销售</h2>
+                                        <span><b>974,688</b>元</span>
+                                        <span class="data-down">
+                                            <small>同比</small>
+                                            <strong>2.3%</strong>
+                                            <i></i>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <h2>吨均</h2>
+                                        <span><b>140,290</b>元</span>
+                                    </li>
+                                </ul>
+                                <div class="map-chart-point" id="mapChartPoint"></div>
+                                <div class="map-chart-path" id="mapChartPath"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrap-right">
+                <div class="item-wrap item-wrap05">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>四区销售金额</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="info_card economic_info clear-fixed-after">
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>东北区</span>
+                                                <b>78,368<small>万元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>华北区</span>
+                                                <b>36,875<small>万元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>西北区</span>
+                                                <b>82,526<small>万元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-cell border-type02">
+                                        <div class="item-border">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <div class="list-data">
+                                            <div class="list-data-inner">
+                                                <span>西南区</span>
+                                                <b>73,962<small>万元</small></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap06">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>销售趋势</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="sales-trend" id="salesTrendChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap item-wrap07">
+                    <div class="item-inner">
+                        <div class="item-cell border-type01">
+                            <div class="title">
+                                <span>销售TOP5城市</span>
+                            </div>
+                            <div class="item-border">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                            <div class="item-content">
+                                <div class="sales-rank-city" id="salesRankCityChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/script/jquery.min.js"></script>
+    <script src="../static/lib/jscrollpane/script/jquery.mousewheel.js"></script>
+    <script src="../static/lib/jscrollpane/script/jquery.jscrollpane.min.js"></script>
+    <script src="../static/lib/echarts/echarts.js"></script>
+    <script src="../static/lib/echarts/china.js"></script>
+    <script src="../static/lib/echarts/wafangdian.js"></script>
+    <script src="../static/lib/scroll/scroll.js"></script>
+    <script src="../static/script/data.js"></script>
+    <script src="../static/script/plugin.js"></script>
+    <script src="../static/script/production.js"></script>
+</body>
+</html>
