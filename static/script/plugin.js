@@ -542,7 +542,7 @@
                 domId:"",
                 data:"",
                 chartDirection:"vertical",//图表方向
-                valueAxisName:"单位:吨",//图表数值轴名称
+                valueAxisName:"培训率",//图表数值轴名称
                 colorType:"green",
                 labelShow:true,
                 barWidth:14,
